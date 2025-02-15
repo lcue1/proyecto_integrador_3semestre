@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="354dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="32dp"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <ImageView
+            android:id="@+id/imagen_producto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/precio_producto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100.99"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/precio_producto"
+
+            />
+        <TextView
+            android:id="@+id/titulo_producto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/subtitulo"
+            android:background="#AA000000"
+            android:text="titulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/descripcion_producto"
+            />
+        <TextView
+            android:id="@+id/descripcion_producto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/normalText"
+            android:text=" "
+            android:background="#AA000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <ImageButton
+            android:id="@+id/carrito_producto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_carrito_compra"
+            android:background="#AA000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

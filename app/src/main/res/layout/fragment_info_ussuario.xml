@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.InfoUssuarioFragment"
+    android:background="@drawable/degradado_main_activity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/infoUsuarioTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tituloFrgmrnyoUsuario"
+            style="@style/titulo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/infoUsuarioContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/infoUsuarioTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoUsuarioNombre"
+                android:text="@string/tituloFrgmrnyoUsuario"
+                style="@style/subtitulo"
+                />
+            <ImageView
+                android:layout_width="172dp"
+                android:layout_height="172dp"
+                android:id="@+id/infoUsuarioImagen"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/imagen_redondeada"
+                android:clipToOutline="true"/>
+
+            <Button
+                android:id="@+id/salitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnSalir"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/fondo_app"
+                />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

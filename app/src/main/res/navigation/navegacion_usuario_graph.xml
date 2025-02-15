@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion_usuario_graph"
+    app:startDestination="@id/infoUssuarioFragment">
+
+    <fragment
+        android:id="@+id/infoUssuarioFragment"
+        android:name="com.example.club_futbol_1.ui.fragments.InfoUssuarioFragment"
+        android:label="fragment_info_ussuario"
+        tools:layout="@layout/fragment_info_ussuario" />
+    <fragment
+        android:id="@+id/noticiasEquipoFragment"
+        android:name="com.example.club_futbol_1.ui.fragments.NoticiasEquipoFragment"
+        android:label="fragment_noticias_equipo"
+        tools:layout="@layout/fragment_noticias_equipo" />
+    <fragment
+        android:id="@+id/tiendaFragment"
+        android:name="com.example.club_futbol_1.ui.fragments.TiendaFragment"
+        android:label="fragment_tienda"
+        tools:layout="@layout/fragment_tienda" />
+</navigation>

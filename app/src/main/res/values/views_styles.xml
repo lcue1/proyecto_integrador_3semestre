@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normalText">20sp</dimen>
+    <dimen name="subtituloTexto">22sp</dimen>
+    <dimen name="titulo">24sp</dimen>
+    <!-- texto -->
+    <style name="normalText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/normalText</item>
+    </style>
+    <style name="titulo" parent="normalText">
+        <item name="android:textSize">@dimen/titulo</item>
+    </style>
+    <style name="subtitulo" parent="normalText">
+        <item name="android:textSize">@dimen/subtituloTexto</item>
+    </style>
+
+
+    <!--Navegacion view style -->
+    <style name="NavigationDrawerItemText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">@dimen/normalText</item> <!-- Tamaño del texto -->
+        <item name="android:textColor">@color/white</item> <!-- Color del texto -->
+    </style>
+    <style name="NavigationViewStyle" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextColor">@color/white</item>
+        <item name="itemIconTint">@color/white</item>
+        <item name="itemTextAppearance">@style/NavigationDrawerItemText</item>
+        <item name="android:paddingTop">32dp</item>
+    </style>
+
+
+    <!-- Item tienda cardview-->
+    <style name="precio_producto" parent="normalText">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:fontFamily">casual </item>
+        <item name="android:background">#AA000000 </item>
+        <item name="android:padding">8dp </item>
+
+    </style>
+</resources>
