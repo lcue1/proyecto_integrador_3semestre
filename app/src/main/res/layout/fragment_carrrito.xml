@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.CarrritoFragment"
+    android:layout_marginBottom="32dp"
+    android:background="@drawable/degradado_main_activity"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/tituloTienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_carrito"
+            android:layout_marginTop="16dp"
+            style="@style/titulo"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+        <Button
+            android:id="@+id/btn_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_regresar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/btn_regresar"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carritoRecycle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@id/detalleAPagar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tituloTienda"
+            app:layout_constraintVertical_bias="0.034" />
+
+        <LinearLayout
+            android:id="@+id/detalleAPagar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:layout_marginBottom="92dp"
+            android:background="#58000000"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/btn_pagar"
+            app:layout_constraintTop_toBottomOf="@id/carritoRecycle"
+
+            tools:layout_editor_absoluteX="48dp">
+
+            <TextView
+                style="@style/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="Detalle pago" />
+
+            <TextView
+                android:id="@+id/cantida_productos"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="Cantidad de productos: : " />
+
+            <TextView
+                android:id="@+id/precio_total_productos"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="Total a pagar: " />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_pagar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/btn_pagar"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

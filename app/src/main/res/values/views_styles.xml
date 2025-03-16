@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="normalText">20sp</dimen>
-    <dimen name="subtituloTexto">22sp</dimen>
-    <dimen name="titulo">24sp</dimen>
+    <dimen name="normalText">14sp</dimen>
+    <dimen name="subtituloTexto">16sp</dimen>
+    <dimen name="titulo">18sp</dimen>
     <!-- texto -->
     <style name="normalText">
         <item name="android:textColor">@color/white</item>
@@ -28,14 +28,49 @@
         <item name="android:paddingTop">32dp</item>
     </style>
 
-
+<!-- Tienda fragment -->
+    <style name="btn_productos_carrito" parent="normalText">
+        <item name="android:textSize">@dimen/titulo</item>
+        <item name="backgroundTint">@color/verde</item>
+    </style>
     <!-- Item tienda cardview-->
     <style name="precio_producto" parent="normalText">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">24dp</item>
         <item name="android:textStyle">bold|italic</item>
         <item name="android:fontFamily">casual </item>
-        <item name="android:background">#AA000000 </item>
+        <item name="android:background">#000000</item>
         <item name="android:padding">8dp </item>
 
     </style>
+
+
+
+    <!-- Carrito fragment -->
+    <style name="btn_regresar" parent="normalText">
+        <item name="android:textSize">@dimen/titulo</item>
+        <item name="backgroundTint">@color/black</item>
+    </style>
+    <style name="btn_pagar" parent="normalText">
+        <item name="android:textSize">@dimen/titulo</item>
+        <item name="android:text">Pagar</item>
+        <item name="backgroundTint">@color/verde</item>
+    </style>
+    
+    <style name="spiner_cantidad_compr" parent="normalText">
+        <item name="android:background">@color/fondo_app</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:gravity">center</item>
+    </style><!--Spiner style-->
+
+    <!--Edit text -->
+
+    <style name="editText" >
+        <item name="android:textSize">26sp</item>
+
+    </style>
+
+
+    
+    
+    
 </resources>

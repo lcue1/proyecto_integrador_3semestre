@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navegacion_usuario_graph"
-    app:startDestination="@id/infoUssuarioFragment">
+    app:startDestination="@id/tiendaFragment">
 
     <fragment
         android:id="@+id/infoUssuarioFragment"
@@ -14,10 +14,48 @@
         android:id="@+id/noticiasEquipoFragment"
         android:name="com.example.club_futbol_1.ui.fragments.NoticiasEquipoFragment"
         android:label="fragment_noticias_equipo"
-        tools:layout="@layout/fragment_noticias_equipo" />
+        tools:layout="@layout/fragment_noticias_equipo" >
+        <action
+            android:id="@+id/action_noticiasEquipoFragment_to_addNoticiaFragment"
+            app:destination="@id/addNoticiaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/tiendaFragment"
         android:name="com.example.club_futbol_1.ui.fragments.TiendaFragment"
         android:label="fragment_tienda"
-        tools:layout="@layout/fragment_tienda" />
+        tools:layout="@layout/fragment_tienda" >
+        <action
+            android:id="@+id/action_tiendaFragment_to_carrritoFragment"
+            app:destination="@id/carrritoFragment" />
+        <action
+            android:id="@+id/action_tiendaFragment_to_agregarEditarProductoFragment"
+            app:destination="@id/agregarEditarProductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carrritoFragment"
+        android:name="com.example.club_futbol_1.ui.fragments.CarrritoFragment"
+        android:label="fragment_carrrito"
+        tools:layout="@layout/fragment_carrrito" >
+        <action
+            android:id="@+id/action_carrritoFragment_to_tiendaFragment"
+            app:destination="@id/tiendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoticiaFragment"
+        android:name="com.example.club_futbol_1.ui.fragments_admin.AddNoticiaFragment"
+        android:label="fragment_add_noticia"
+        tools:layout="@layout/fragment_add_noticia" >
+        <action
+            android:id="@+id/action_addNoticiaFragment_to_noticiasEquipoFragment"
+            app:destination="@id/noticiasEquipoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarEditarProductoFragment"
+        android:name="com.example.club_futbol_1.ui.fragments_admin.AgregarEditarProductoFragment"
+        android:label="fragment_agregar_editar_producto"
+        tools:layout="@layout/fragment_agregar_editar_producto" >
+        <action
+            android:id="@+id/action_agregarEditarProductoFragment_to_tiendaFragment"
+            app:destination="@id/tiendaFragment" />
+    </fragment>
 </navigation>

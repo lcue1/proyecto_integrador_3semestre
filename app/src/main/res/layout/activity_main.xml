@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -9,12 +8,13 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@drawable/degradado_main_activity"
-    >\
+    >
 
     <ImageView
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/descriptionLogoMainActivity"
         />
     <LinearLayout
         android:id="@+id/contenedorRegistrarse"
@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Registrarse"
+            android:text="@string/tituloMainActivity"
             android:textStyle="bold|italic"
             android:layout_marginTop="32dp"
             style="@style/titulo"
@@ -39,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/btn_google_sesion"
                 android:layout_marginTop="48dp"
+                android:contentDescription="@string/descriptionBotonLoginGoogle"
                 />
 
     </LinearLayout>

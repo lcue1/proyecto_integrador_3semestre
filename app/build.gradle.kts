@@ -87,4 +87,12 @@ dependencies {
 
     implementation ("androidx.navigation:navigation-fragment-ktx:2.7.2")
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.2")
+
+
+    //messages and notifications firebase
+    implementation ("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-messaging-ktx:24.1.0")
+
+    //notification
+    implementation("androidx.core:core-ktx:1.15.0")
 }

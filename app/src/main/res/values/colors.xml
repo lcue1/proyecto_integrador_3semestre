@@ -2,5 +2,6 @@
 <resources>
     <color name="fondo_app">#AF0A0A</color>
     <color name="black">#FF000000</color>
+    <color name="verde">#8BC34A</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

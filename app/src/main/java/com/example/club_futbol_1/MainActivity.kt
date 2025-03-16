@@ -37,22 +37,32 @@ class   MainActivity : AppCompatActivity() {
     private fun loginUsuario() {
 
         val currentUser = auth.currentUser
+        Log.d("login","inicio")
+
         if (currentUser != null) {
             currentUser.reload()
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {//usuario registrado
                         //    currentUser.displayName
                         abrirActividadUsuario(currentUser)
+                        Log.d("login","registrado")
 
                     } else {// Usuario no válido (probablemente eliminado)
                         //registrarUsuario()
                         binding.contenedorRegistrarse.visibility=View.VISIBLE
+                        Log.d("login","eliminado")
+                        binding.btnRegistrarseGoogle.setOnClickListener {
+                            Log.d("login","iniciar registro")
 
+                            registrarUsuario()
+                        }
                     }
                 }
         } else {//usuario no logeado null
             binding.contenedorRegistrarse.visibility=View.VISIBLE
             binding.btnRegistrarseGoogle.setOnClickListener {
+                Log.d("login","iniciar registro")
+
                 registrarUsuario()
             }
         }
@@ -100,7 +110,7 @@ class   MainActivity : AppCompatActivity() {
             val account = task.getResult(ApiException::class.java)!!
            firebaseAuthWithGoogle(account.idToken!!)
         } catch (e: ApiException) {
-            Log.w("SignInActivity", "Google sign in failed", e)
+            Log.w("login", "Google sign in failed", e)
         }
     }
 

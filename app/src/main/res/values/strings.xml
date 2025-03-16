@@ -2,10 +2,30 @@
     <string name="app_name">club_futbol_1</string>
 
 
+    <!-- Main activity -->
+    <string name="tituloMainActivity">Registrarse</string>
+    <string name="descriptionLogoMainActivity">Logo equipo</string>
+    <string name="descriptionBotonLoginGoogle">Boton login google</string>
+
     <!--Fragmenot usuaruario -->
     <string name="tituloFrgmrnyoUsuario">Perfil</string>
     <string name="btnSalir">Salir</string>
+
+
+    <!-- Fragmento carrito -->
+    <string name="titulo_carrito">Tus productos</string>
+    <string name="btn_regesar">Carrito</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <!-- Add noticias -->
+    <string name="titulo_agregar_noticia">Agregar noticia</string>
+    <string name="channel_name">chanel_prototipo_futbo</string>
+    <string name="channel_description">Canal para notificaciones de noticias nuevas</string>
+
+
+    <!--Item productos-->
+    <string name="btnEditarProducto">Editar</string>
+    <string name="btnEliminarProducto">X</string>
 </resources>

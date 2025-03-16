@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments_admin.AgregarEditarProductoFragment"
+    android:background="@drawable/degradado_main_activity"
+    >
+    <TextView
+        android:id="@+id/aEProductoTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Producto"
+        style="@style/titulo"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        >
+        <EditText
+            android:id="@+id/aEProductoNombreET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Nombre"
+            android:layout_marginBottom="32dp"
+            />
+        <EditText
+            android:id="@+id/aEProductoDescripcionET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Descripcion"
+            android:layout_marginBottom="32dp"
+            />
+        <EditText
+            android:id="@+id/aEProductoPrecioET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Precio"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="32dp"
+            />
+        <EditText
+            android:id="@+id/aEProductoURLimgET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="URL imagen"
+            android:layout_marginBottom="32dp"
+            />
+
+        <Button
+            android:id="@+id/agregarEditarProductoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/verde"
+            android:text="Agregar"
+            />
+    </LinearLayout>
+
+
+</FrameLayout>
